@@ -1,77 +1,35 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>D'Benito</title>
-  <meta name="description" content="Portafolio de análisis de datos de Walter Benito Castro: Power BI, SQL Server/Azure SQL, captura con Forms/Power Apps y documentación en GitHub." />
-  
-<!-- Bootstrap 5 CSS (CDN) -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-  crossorigin="anonymous"
-/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISD Perú</title>
+    <link rel="icon" href="isd.peru/image/logo_ico.ico">
+    
+    <link rel="stylesheet" href="./isd.peru/css/bootstrap.css">
+    <link rel="stylesheet" href="./isd.peru/css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./isd.peru/css/color/variables-blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Tu hoja de estilos después, para poder sobrescribir -->
-<link rel="stylesheet" href="./assets/css/styles.css" />
-
+    <link rel="stylesheet" href="./isd.peru/css/index.css">
 </head>
 <body>
-  <!-- TOPBAR PROFESIONAL -->
-
-<header role="banner">
-  <nav class="navbar navbar-expand-lg border-bottom" style="background:#0b1220;border-color:#1f2937;">
-    <div class="container-fluid px-4">
-      <!-- Marca (logo + nombre) -->
-      <a class="navbar-brand d-flex align-items-center gap-2" href="./" style="color:#e5e7eb;">
-        <!--<img src="./assets/img/logo_isd.png" alt="Logo Walter Benito Castro" width="30" height="30" style="object-fit:contain;border-radius:0px;border:0px solid #1f2937;background:#0b1325;">-->
-        <span class="fw-bold">Analista de Datos</span>
-        <small class="text-bg-success d-none d-sm-inline"> Walter Arturo Benito Castro</small>
-      </a>
-      <!-- Botón hamburguesa (móvil) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topbarNav" aria-controls="topbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Contenido colapsable -->
-      <div class="collapse navbar-collapse" id="topbarNav">
-        <!-- (Opcional) Menú de secciones a la izquierda -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Ejemplos de links de navegación -->
-          <li class="nav-item">
-            <a class="nav-link text-white" href="./">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="./proyectos/powerbi.html">Proyectos</a>
-          </li>
-        </ul>
-
-        <!-- Chips de contacto a la derecha -->
-        <ul class="navbar-nav ms-auto align-items-center gap-2">
-            <li class="nav-item">
-                <a class="btn btn-outline-light btn-sm border-0 d-flex align-items-center gap-2" href="tel:+51947408800">
-                <!-- Icono Tel -->
-                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1v3.59a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.6a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.01z"/></svg>
-                <span class="d-none d-sm-inline">+51 947 408 800</span>
-                <span class="d-inline d-sm-none">Tel</span>
-                </a>
-            </li>          
-            <li class="nav-item">
-            <a
-                class="btn btn-outline-light btn-sm border-0 d-flex align-items-center gap-2"
-                href="https://wa.me/51947408800?text=Hola%20quisiera%20más%20información"
-                target="_blank"
-                rel="noopener"
-                aria-label="Contactar por WhatsApp"
-                onclick="
+    <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope-fill"></i><a href="mailto:isd.org.pe@gmail.com">benithods@gmail.com</a>
+                <i class="bi bi-telephone-fill phone-icon"></i> +51 947 408 800
+            </div>
+            <div class="social-links d-none d-md-block">
+                <a target="_blank" href="https://www.linkedin.com/in/isd-per%C3%BA-6a22771b0/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a target="_blank" href="https://twitter.com/isd_peru" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a target="_blank" href="#" class="instagram"><i class="bi bi-github"></i></a>
+                <a target="_blank" href="https://wa.me/51947408800?text=Hola%20quisiera%20más%20información" class="whatsapp" onclick="
                 // Intentar abrir la app de WhatsApp primero (móvil)
                 const phone = '51947408800';
                 const text = encodeURIComponent('Hola quisiera más información');
                 const appUrl = `whatsapp://send?phone=${phone}&text=${text}`;
                 const webUrl = `https://wa.me/${phone}?text=${text}`;
-
                 // Si se puede, abrir la app
                 window.location.href = appUrl;
 
@@ -82,263 +40,126 @@
                 }, 800);
 
                 // Prevenir navegación inmediata del href; manejamos arriba
-                return false;
-                "
-            >
-                <!-- Icono WhatsApp (SVG) -->
-                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.77 0 .7 5.06.7 11.34c0 2 .52 3.95 1.52 5.68L0 24l7.2-2.1a11.25 11.25 0 0 0 4.85 1.12h.01c6.28 0 11.35-5.06 11.35-11.34a11.26 11.26 0 0 0-3.89-8.2zM12.06 21.3a9.9 9.9 0 0 1-5.04-1.39l-.36-.21-4.27 1.25 1.25-4.16-.23-.38a9.87 9.87 0 0 1-1.52-5.07c0-5.46 4.45-9.9 9.92-9.9a9.86 9.86 0 0 1 9.92 9.9c0 5.47-4.45 9.96-9.67 9.96zm5.66-7.39c-.31-.16-1.82-.9-2.1-1-.28-.1-.49-.16-.7.16-.2.32-.8 1-.98 1.2-.18.2-.36.24-.67.08-.31-.16-1.3-.48-2.47-1.53-.9-.8-1.5-1.78-1.68-2.1-.18-.32-.02-.49.14-.65.14-.14.31-.36.47-.54.16-.18.2-.32.31-.54.1-.22.05-.4-.02-.56-.08-.16-.7-1.67-.96-2.28-.25-.6-.5-.52-.7-.52h-.6c-.2 0-.56.08-.86.4-.3.32-1.12 1.08-1.12 2.64 0 1.56 1.15 3.06 1.3 3.26.16.2 2.27 3.46 5.5 4.84.77.33 1.37.52 1.84.66.77.25 1.47.22 2.02.14.62-.09 1.82-.74 2.08-1.46.26-.72.26-1.34.18-1.46-.08-.12-.28-.2-.6-.36z"/>
-                </svg>
-
-                <span class="d-none d-sm-inline">WhatsApp</span>
-                <span class="d-inline d-sm-none">WA</span>
-            </a>
-            </li>
-            <li class="nav-item">
-                <a class="btn btn-outline-light btn-sm border-0 d-flex align-items-center gap-2" href="mailto:tuemail@ejemplo.com">
-                <!-- Icono correo -->
-                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z"/></svg>
-                <span class="d-none d-sm-inline">benithods@gmail.com</span>
-                <span class="d-inline d-sm-none">Email</span>
-                </a>
-            </li>
-            <!-- <li class="nav-item d-none d-md-block">
-                <span class="badge rounded-pill text-bg-secondary">Arequipa, Perú</span>
-            </li> -->
-            <li class="nav-item">
-                <a class="btn btn-outline-light btn-sm border-0 d-flex align-items-center gap-2" href="https://github.com/benithods" target="_blank" rel="noopener">
-                <!-- Icono GitHub -->
-                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A12 12 0 0 0 8.21 23.9c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61c-.55-1.4-1.34-1.77-1.34-1.77c-1.09-.75.08-.73.08-.73c1.2.08 1.83 1.24 1.83 1.24c1.07 1.84 2.8 1.31 3.48 1c.11-.78.42-1.31.76-1.61c-2.67-.3-5.47-1.34-5.47-5.95a4.66 4.66 0 0 1 1.24-3.24a4.33 4.33 0 0 1 .12-3.2s1-.32 3.28 1.23a11.32 11.32 0 0 1 5.98 0C16.25 7.01 17.25 7.33 17.25 7.33a4.33 4.33 0 0 1 .12 3.2a4.66 4.66 0 0 1 1.24 3.24c0 4.62-2.8 5.65-5.48 5.95c.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/></svg>
-                <span class="d-none d-sm-inline"> @benithods </span>
-                <span class="d-inline d-sm-none">GitHub</span>
-                </a>
-            </li>
-            <!--<li class="nav-item d-none d-sm-block">
-                <a class="btn btn-success btn-sm" href="./#contacto">Contacto</a>
-            </li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-
-  <!-- CONTENIDO TEMPORAL PARA PROBAR -->
-  <main class="container" role="main">
-    <!-- HERO -->
-    <section class="hero-section py-5 py-lg-6">
-    <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-        <!-- Texto -->
-        <div class="col-12 col-lg-7">
-            <span class="badge rounded-pill text-bg-success mb-3">Portafolio de Datos</span>
-            <h1 class="display-5 fw-bold mb-3">
-            Insights con <span class="text-accent">datos reales</span> de punta a punta
-            </h1>
-            <p class="lead text-muted mb-4">
-            Recolección (Forms/Power Apps) → Modelado (SQL Server / Azure SQL) → 
-            Visualización (Power BI) → Documentación (GitHub).
-            </p>
-
-            <ul class="list-unstyled mb-4">
-            <li class="d-flex align-items-start mb-2">
-                <span class="check me-2" aria-hidden="true">✔</span>
-                <span>Instrumentos de recojo diseñados para calidad y trazabilidad</span>
-            </li>
-            <li class="d-flex align-items-start mb-2">
-                <span class="check me-2" aria-hidden="true">✔</span>
-                <span>Modelos relacionales con vistas analíticas listas para BI</span>
-            </li>
-            <li class="d-flex align-items-start">
-                <span class="check me-2" aria-hidden="true">✔</span>
-                <span>Dashboards narrados con foco en decisiones</span>
-            </li>
-            </ul>
-
-            <div class="d-flex flex-wrap gap-2">
-            <!-- CTA principal: ir a proyectos -->
-            <a class="btn btn-success btn-lg px-4" href="./proyectos/powerbi.html">
-                Ver proyectos
-            </a>
-            <!-- CTA secundario: contacto (ancla) -->
-            <a class="btn btn-outline-light btn-lg px-4" href="./#contacto">
-                Contacto
-            </a>
+                return false;">
+                
+                <i class="bi bi-whatsapp"></i></a>
             </div>
         </div>
-
-        <!-- Imagen / Ilustración (opcional) -->
-        <div class="col-12 col-lg-5 text-center">
-            <!-- Usa una imagen propia, o deja este SVG de ejemplo -->
-            <img
-            src="./assets/img/hero-illustration.png"
-            class="img-fluid hero-illustration"
-            alt="Visualización de datos y modelado"
-            onerror="this.style.display='none';"
-            />
+    </section>
+    <!-- ======= Header ======= -->
+    <section id="hero">
+    <div class="hero-content">
+        <div class="hero-inner">
+        <img class="hero-image" src="./isd.peru/image/background/Nikola_Tesla.webp" alt="Descripción de la imagen">
+        <div class="hero-text">
+            <h1>¿Fracaso?</h1>
+            <h5>"Nunca he fallado. He tenido 10,000 intentos exitosos al descubrir qué no funciona"</h5>
+            <!-- (Opcional) CTA -->
+            <!-- <a class="btn-cta" href="#contacto">Contáctame</a> -->
         </div>
         </div>
     </div>
     </section>
 
+
+<main>
+
     
-<!-- PROYECTOS -->
-<section id="proyectos" class="projects-section py-5 py-lg-6">
-  <div class="container">
-    <!-- Título y subtítulo -->
-    <div class="row mb-4 mb-lg-5">
-      <div class="col-12 col-lg-8">
-        <h2 class="h1 fw-bold mb-2">Proyectos</h2>
-        <p class="text-muted mb-0">
-          Casos de estudio end‑to‑end: diseño de instrumentos, modelado relacional, vistas analíticas y dashboards narrados.
-        </p>
-      </div>
-    </div>
-
-    <!-- Grid de cards -->
-    <div class="row g-4">
-      <!-- Card 1: Power BI -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 shadow-sm bg-dark border-0">
-          <div class="ratio ratio-16x9 card-img-top bg-gradient-green d-flex align-items-center justify-content-center">
-            <!-- Puedes reemplazar por una imagen -->
-            <span class="display-6 text-accent fw-bold">Power BI</span>
-          </div>
-          <div class="card-body d-flex flex-column">
-            <div class="mb-2">
-              <span class="badge rounded-pill text-bg-success me-1">DAX</span>
-              <span class="badge rounded-pill text-bg-success me-1">Power Query</span>
-              <span class="badge rounded-pill text-bg-secondary">Storytelling</span>
-            </div>
-            <h3 class="h5">Observatorio Social — Indicadores</h3>
-            <p class="text-muted mb-3">
-              Dashboard con foco en decisiones. Indicadores territoriales, filtros contextuales y narrativa ejecutiva.
-            </p>
-            <ul class="small text-muted mb-4">
-              <li>Publicación segura / pública según el caso</li>
-              <li>Métricas consistentes con DAX</li>
-              <li>Actualización programada</li>
-            </ul>
-            <div class="mt-auto d-flex gap-2">
-              <a href="./proyectos/powerbi.html" class="btn btn-success">Ver caso</a>
-              <!-- Si el reporte es público, enlaza el iframe o el link del Service -->
-              <a href="#" class="btn btn-outline-light disabled" aria-disabled="true">Ver dashboard</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Card 2: SQL / Azure SQL -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 shadow-sm bg-dark border-0">
-          <div class="ratio ratio-16x9 card-img-top bg-gradient-blue d-flex align-items-center justify-content-center">
-            <span class="display-6 fw-bold" style="color:#7dd3fc;">SQL</span>
-          </div>
-          <div class="card-body d-flex flex-column">
-            <div class="mb-2">
-              <span class="badge rounded-pill text-bg-secondary me-1">Modelado</span>
-              <span class="badge rounded-pill text-bg-secondary me-1">Vistas</span>
-              <span class="badge rounded-pill text-bg-secondary">Performance básico</span>
-            </div>
-            <h3 class="h5">Modelo relacional — Azure SQL</h3>
-            <p class="text-muted mb-3">
-              Normalización en tablas de hechos y dimensiones; vistas analíticas para consumo directo en Power BI.
-            </p>
-            <ul class="small text-muted mb-4">
-              <li>Scripts versionados en GitHub</li>
-              <li>Diccionario de datos</li>
-              <li>Diagrama entidad‑relación</li>
-            </ul>
-            <div class="mt-auto d-flex gap-2">
-              <a href="./proyectos/sql-azure.html" class="btn btn-success">Ver caso</a>
-              <a href="./sql/" class="btn btn-outline-light">Ver scripts</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Card 3: Recolección de datos -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 shadow-sm bg-dark border-0">
-          <div class="ratio ratio-16x9 card-img-top bg-gradient-purple d-flex align-items-center justify-content-center">
-            <span class="display-6 fw-bold" style="color:#e9d5ff;">Recojo</span>
-          </div>
-          <div class="card-body d-flex flex-column">
-            <div class="mb-2">
-              <span class="badge rounded-pill text-bg-secondary me-1">Forms</span>
-              <span class="badge rounded-pill text-bg-secondary me-1">Power Apps</span>
-              <span class="badge rounded-pill text-bg-secondary">Validaciones</span>
-            </div>
-            <h3 class="h5">Instrumentos de recojo — Forms / Power Apps</h3>
-            <p class="text-muted mb-3">
-              Diseño de formularios con validaciones, control de usuarios y trazabilidad de datos.
-            </p>
-            <ul class="small text-muted mb-4">
-              <li>Diseño del instrumento</li>
-              <li>Flujo de almacenamiento</li>
-              <li>Buenas prácticas de calidad</li>
-            </ul>
-            <div class="mt-auto d-flex gap-2">
-              <a href="./proyectos/recoleccion.html" class="btn btn-success">Ver caso</a>
-              <a href="./docs/instrumentos/" class="btn btn-outline-light">Ver instrumentos</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+    <!--  ============ Presentación  ============ -->
 
 
-<section class="container my-4">
-  <h2 class="h4 mb-3">Mi informe público de Power BI</h2>
+    <!--  ============Qué hacemos?============  -->
 
-  <div class="ratio ratio-16x9">
-    <iframe
-      title="Informe público de Power BI"
-      src="https://app.powerbi.com/view?r=eyJrIjoiNWIxYjFiYmYtMjVhMC00OTZlLWI1MDYtZmFhMzA1OGFlNDA1IiwidCI6IjcxOTk5YTJlLTdmYWEtNDQ1Ny05NjcxLWUxZjgyMGNmMGM1NSIsImMiOjR9"
-      allowfullscreen
-      loading="lazy"
-      style="border:0;"
-      sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock allow-downloads"
-      referrerpolicy="strict-origin-when-cross-origin"
-    ></iframe>
-  </div>
+    <!--  ============ Interes Académico  ============  -->
 
-  <!-- Opcional: enlaces de acción -->
-  <div class="mt-2 d-flex gap-2">
-    <a
-      class="btn btn-sm btn-primary"
-      href="https://app.powerbi.com/view?r=eyJrIjoiNWIxYjFiYmYtMjVhMC00OTZlLWI1MDYtZmFhMzA1OGFlNDA1IiwidCI6IjcxOTk5YTJlLTdmYWEtNDQ1Ny05NjcxLWUxZjgyMGNmMGM1NSIsImMiOjR9"
-      target="_blank" rel="noopener"
-    >Abrir en pestaña nueva</a>
-
-    <button class="btn btn-sm btn-outline-secondary" onclick="document.documentElement.requestFullscreen?.()">
-      Pantalla completa (experimental)
-    </button>
-  </div>
-</section>
+    <!-- ======= CTA ======= -->
+    
+    <!--============ Nuestro Trabajo ==========================-->
 
 
 
-  </main>
 
-  <footer class="footer">
+
+
+</main>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="footer-top">
     <div class="container">
-      <p>© <span id="year"></span> Walter Benito Castro</p>
-    </div>
-  </footer>
+        <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>D'Benithods</span>
+            </a>
+            <p>Un espacio de análisis e información académica dedicado al estudio de la sociedad, con el propósito de conocer, compartir y generar sensibilidad frente a los fenómenos sociales del entorno.</p>
+            <div class="social-links mt-3">
+            <a href="https://twitter.com/isd_peru" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/ISD-Per%C3%BA-2137914993131191" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/isd-per%C3%BA-6a22771b0/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/51914282283" class="whatsapp-btn"><i class="bi bi-whatsapp"></i></a>
+            
+            </div>
+        </div>
 
-  
-<!-- Bootstrap 5 JS (para el colapso móvil del navbar) -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jv6x0xIM+B07jRM"
-  crossorigin="anonymous"
-></script>
-<script>
-    // Actualizar el año en el pie de página
-    document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        <div class="col-lg-2 col-6 footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="inicio">Presentación</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="inicio">Qué hacemos</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="inicio">Nuestro trabajo</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="inicio">Áreas de interés</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="inicio">Actuales proyectos</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+            <h4>Nosotros</h4>
+            <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="isd.peru/presetation">Nuestro trabajo</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="isd.peru/presetation">Misión ISD</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="isd.peru/presetation">Visión ISD</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="isd.peru/presetation">Objetivos ISD</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="isd.peru/team">Nuestro equipo</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contáctanos</h4>
+            <p>
+                Arequipa - Perú <br>
+            <strong>Cel:</strong> +51 914 282 283<br>
+            <strong>Email:</strong> isd.org.pe@gmail.com<br>
+            <br>
+            <br>
+            
+            </p>
+
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="copyright">
+        &copy; Copyright <strong><span>D'Benithods</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+    </div>
+</footer><!-- End Footer -->
+
+
+
+
+    <script src="isd.peru/js/bootstrap.js"></script>
 </body>
 </html>
