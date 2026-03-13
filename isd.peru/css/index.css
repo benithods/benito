@@ -52,7 +52,7 @@ Hero
 -----------------------------------------------------*/
 #hero{
     width: 100%;
-    height: 35vh;
+    height: 20vh;
     background: url("../image/background/bg_2.jpg") center center;
     background-size: cover;
     position: relative;
