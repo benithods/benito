@@ -181,6 +181,29 @@ Hero
 }
 
 
+/* ----------------------------------------------
+   Main con margen superior e inferior
+------------------------------------------------ */
+main.site-main {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+
+  /* agrega espacio contra otras secciones */
+  margin-block: clamp(16px, 2vw, 40px); /* ↑↓ */
+
+  /* mantiene tu padding interno, puedes aumentarlo si quieres más aire dentro */
+  padding: clamp(32px, 3.2vw, 48px) clamp(16px, 1.6vw, 22px); /* ↑↓ ←→ */
+
+  border-left: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+
+  /* si quieres bordes suaves al separarlo, puedes aumentar esto */
+  border-radius: 8px;
+}
+
+
+
 /*-----------------------------------------------------
 Presentation
 -----------------------------------------------------*/

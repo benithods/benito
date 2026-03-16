@@ -1,29 +1,117 @@
-/* Sección Power BI */
-.powerbi-section {
-    width: 100%;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    background-color: #f8f9fa;
+/* ===== Presentación / Intro Power BI ===== */
+.pbi-intro-section {
+  background: #ffffff;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid #eef0f3;
 }
 
-/* Contenedor responsive */
-.powerbi-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px; /* limita tamaño en pantallas grandes */
-    padding-bottom: 30.25%; /* Relación 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.pbi-intro-section .container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.pbi-intro-header {
+  margin-bottom: 1rem;
+}
+
+.pbi-intro-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0b2e59; /* acorde a tu paleta */
+  margin: 0 0 0.25rem 0;
+}
+
+.pbi-intro-subtitle {
+  font-size: 1rem;
+  color: #5f6b7a;
+  margin: 0;
+}
+
+.pbi-intro-body {
+  margin-top: 1rem;
+  color: #2b2f33;
+  line-height: 1.65;
+}
+
+.pbi-intro-body p {
+  margin: 0 0 0.75rem 0;
+}
+
+.pbi-intro-list {
+  margin: 0.5rem 0 0 1.25rem;
+  padding: 0;
+}
+
+.pbi-intro-list li {
+  margin: 0.5rem 0;
+}
+
+/* =====================================================
+   Power BI Section – Marco editorial profesional
+===================================================== */
+.powerbi-section {
+  width: 100%;
+  padding-block: clamp(28px, 4vw, 56px);
+
+  /* Fondo neutro detrás */
+  background-color: #f4f6f8;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Marco exterior del dashboard */
+.powerbi-section::before {
+  content: "";
+  position: absolute;
+}
+
+/* Contenedor del marco */
+.powerbi-section > .powerbi-container {
+  width: 100%;
+  max-width: 1100px;
+
+  /* Marco */
+  padding: clamp(16px, 2vw, 28px);
+  background-color: #ffffff;
+  border: 1px solid #e1e6eb;
+  border-radius: 14px;
+
+  /* Profundidad elegante */
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
+
+  /* Altura del BI */
+  height: clamp(440px, 60vh, 720px);
+
+  overflow: hidden;
 }
 
 /* Iframe */
 .powerbi-container iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+/* ======================
+   Ajustes específicos móvil
+====================== */
+@media (max-width: 768px) {
+  .powerbi-section > .powerbi-container {
+    max-width: 95%;
+    height: 72vh;
+    min-height: 540px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .powerbi-section > .powerbi-container {
+    height: 75vh;
+    min-height: 580px;
+    padding: 12px;
+  }
 }
